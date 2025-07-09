@@ -1,7 +1,7 @@
 # ebpf_file_access
 file access control with eBPF
 
-프로젝트 빌드 및 실행
+프로젝트 빌드 및 실행 (사전에 Go 설치 필요)
 
 - 빌드
 

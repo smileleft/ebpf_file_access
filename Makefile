@@ -1,21 +1,13 @@
 # Makefile
-.PHONY: all build clean run
+.PHONY: all run clean
 
-C_SOURCES := bpf/file_acl.c
-GO_SOURCES := main.go
+PYTHON_APP := python_main.py
+BPF_C_SOURCE := bpf/file_acl.c
 
-all: build
+all: run
 
-build: bpf_file_acl.go
-go build -o file-access-control ${GO_SOURCES}
-
-bpf_file_acl.go: ${C_SOURCES}
-go generate ./...
+run:
+	sudo python3 ${PYTHON_APP}
 
 clean:
-rm -f file-access-control bpf_file_acl.go bpf_file_acl_bpfel.o bpf_file_acl_bpfel_xgo.o
-rm -rf bpf/
-rm -rf go.sum go.mod
-
-run: build
-sudo ./file-access-control
+	rm -f /tmp/secret.txt # remove test file

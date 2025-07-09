@@ -1,22 +1,12 @@
 # ebpf_file_access
 file access control with eBPF
 
-프로젝트 빌드 및 실행
-
-- 빌드
-
-```bash
-make build
-```
-
-go generate 가 bpf_file_acl.go 파일을 생성하고 go build가 실행 파일을 생성함.
-
-제대로 빌드되면 file-access-control 이라는 바이너리 파일이 생성됨
+실행
 
 - 실행
 
 ```bash
-sudo ./file-access-control
+make run
 ```
 
 프로그램이 실행되면 “eBPF program loaded and attached…” 메시지가 출력됨

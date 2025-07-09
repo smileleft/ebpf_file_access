@@ -1,7 +1,7 @@
 # ebpf_file_access
 file access control with eBPF
 
-실행
+실행(Python user prgram은 별도의 빌드 필요없슴)
 
 - 실행
 
